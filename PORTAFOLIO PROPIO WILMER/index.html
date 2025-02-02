@@ -1,0 +1,140 @@
+<!-- <!DOCTYPE html>
+<html lang="es"> <!-- Inicio del documento HTML y definición del idioma -->
+<!--<head>
+    <meta charset="UTF-8"> <!-- Definición de codificación de caracteres -->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con Microsoft Edge -->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsiva -->
+    <!--<title>Portafolio de Wilmer Acosta Vela</title> <!-- Título personalizado del portafolio -->
+    <!--<link rel="stylesheet" href="style.css"> <!-- Enlace a la hoja de estilos externa -->
+<!--</head>
+<body>
+    <header> <!-- Encabezado principal -->
+        <!--<nav> <!-- Menú de navegación -->
+            <!--<ul>
+                <li><a href="#perfil">Inicio</a></li>
+                <li><a href="#redes">Redes Sociales</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1>Hola, soy <strong>Wilmer Acosta Vela</strong></h1> <!-- Título con parte resaltada -->
+        <!--<h2>Desarrollador Web</h2> <!-- Subtítulo con la especialización -->
+    <!--</header>
+    
+    <main> <!-- Contenedor principal del contenido -->
+        <!--<section id="perfil"> <!-- Sección para la imagen y presentación -->
+            <!--<img src="desarrollador_web.jpg" alt="Foto de Wilmer Acosta Vela" width="200"> <!-- Imagen del desarrollador -->
+            <!--<p>Hola, soy <strong>Wilmer Acosta Vela</strong>, un apasionado desarrollador web con experiencia en la creación 
+                de soluciones digitales innovadoras. Me especializo en diseño responsivo, 
+                desarrollo front-end y optimización de sitios web.</p> <!-- Breve descripción personal -->
+       <!-- </section>
+        
+        <section id="redes"> <!-- Sección con botones a redes sociales -->
+            <!--<a href="https://instagram.com/tuusuario" target="_blank">
+                <button>Instagram</button>
+            </a> <!-- Botón para Instagram -->
+            <!--<a href="https://github.com/tuusuario" target="_blank">
+                <button>Github</button>
+            </a> <!-- Botón para Github -->
+        <!--</section>
+    </main>
+    
+    <footer> <!-- Pie de página -->
+        <!--<section id="contacto"> <!-- Sección de contacto -->
+            <!--<p>Contacto: <a href="wilmer@hotmail.com">tuemail@example.com</a></p>
+            <p>&copy; 2025 Wilmer Acosta Vela. Todos los derechos reservados.</p>
+        </section>
+    </footer>
+</body>
+</html>
+--> 
+
+<!DOCTYPE html>
+<html lang="es"> <!-- Inicio del documento HTML y definición del idioma -->
+<head>
+    <meta charset="UTF-8"> <!-- Definición de codificación de caracteres -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con Microsoft Edge -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsiva -->
+    <title>Portafolio de Wilmer Acosta Vela</title> <!-- Título personalizado del portafolio -->
+    <link rel="stylesheet" href="style.css"> <!-- Enlace correcto a style.css -->
+    <link rel="stylesheet" href="formal.css" id="theme-formal" disabled> <!-- Hoja de estilos formal -->
+    <link rel="stylesheet" href="divertido.css" id="theme-divertido" disabled> <!-- Hoja de estilos divertida -->
+    <link rel="stylesheet" href="minimalista.css" id="theme-minimalista" disabled> <!-- Hoja de estilos minimalista -->
+</head>
+<body>
+    <header> <!-- Encabezado principal -->
+        <nav> <!-- Menú de navegación -->
+            <ul>
+                <li><a href="#perfil">Inicio</a></li>
+                <li><a href="#redes">Redes Sociales</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1>Hola, soy <strong>Wilmer Acosta Vela</strong></h1> <!-- Título con parte resaltada -->
+        <h2>Desarrollador Web</h2> <!-- Subtítulo con la especialización -->
+    </header>
+    
+    <main> <!-- Contenedor principal del contenido -->
+        <section id="perfil"> <!-- Sección para la imagen y presentación -->
+            <img src="desarrollador_web.jpg" alt="Foto de Wilmer Acosta Vela" width="200"> <!-- Imagen del desarrollador -->
+            <p>Hola, soy <strong>Wilmer Acosta Vela</strong>, un apasionado desarrollador web con 
+                experiencia en la creación de soluciones digitales innovadoras. Me especializo en diseño 
+                responsivo, desarrollo front-end y optimización de sitios web.</p> <!-- Breve descripción personal -->
+        </section>
+        
+        <section id="redes"> <!-- Sección con botones a redes sociales -->
+            <a href="https://instagram.com/tuusuario" target="_blank" class="enlace">
+                <button>Instagram</button>
+            </a> <!-- Botón para Instagram -->
+            <a href="https://github.com/tuusuario" target="_blank" class="enlace">
+                <button>Github</button>
+            </a> <!-- Botón para Github -->
+        </section>
+        
+        <section id="temas"> <!-- Sección para cambiar estilos -->
+            <h3>Selecciona un estilo:</h3>
+            <button onclick="cambiarTema('formal')">Formal</button>
+            <button onclick="cambiarTema('divertido')">Divertido</button>
+            <button onclick="cambiarTema('minimalista')">Minimalista</button>
+            <button onclick="cambiarTema('')">Volver al Original</button>
+        </section>
+    </main>
+    
+    <footer> <!-- Pie de página -->
+        <section id="contacto"> <!-- Sección de contacto -->
+            <p>Contacto: <a href="mailto:wilmer@hotmail.com" class="enlace">wilmer@hotmail.com</a></p>
+            <p>&copy; 2025 Wilmer Acosta Vela. Todos los derechos reservados.</p>
+        </section>
+    </footer>
+
+    <script>
+        function cambiarTema(tema) {
+            let styleCSS = document.querySelector('link[href="styles.css"]'); // Selecciona el CSS base
+            let formalCSS = document.getElementById('theme-formal');
+            let divertidoCSS = document.getElementById('theme-divertido');
+            let minimalistaCSS = document.getElementById('theme-minimalista');
+    
+            // Deshabilita todos los estilos personalizados
+            formalCSS.disabled = true;
+            divertidoCSS.disabled = true;
+            minimalistaCSS.disabled = true;
+    
+            // Si el usuario elige un tema, activamos ese y deshabilitamos styles.css
+            if (tema === 'formal') {
+                formalCSS.disabled = false;
+                styleCSS.disabled = true;
+            } else if (tema === 'divertido') {
+                divertidoCSS.disabled = false;
+                styleCSS.disabled = true;
+            } else if (tema === 'minimalista') {
+                minimalistaCSS.disabled = false;
+                styleCSS.disabled = true;
+            } else {
+                // Si no hay tema seleccionado, activamos styles.css nuevamente
+                styleCSS.disabled = false;
+            }
+        }
+    </script>    
+
+</body>
+</html>
+
